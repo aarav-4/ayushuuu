@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Baby! 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top right, #1e1e3f, #5e2e8d);
+      color: #fff;
+      text-align: center;
+      overflow: hidden; /* Important to keep balloons from showing a scrollbar */
+    }
+
+    .container {
+      position: relative;
+      z-index: 2; /* Ensures text and cake are above the confetti */
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 3em;
+      animation: pop 1s ease-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    /* --- Cake Animation --- */
+    .cake-container {
+      margin: 30px auto;
+      width: 250px;
+      height: 250px;
+      animation: pop 1.5s ease-out;
+    }
+
+    .cake-container img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .audio-control {
+      margin-top: 20px;
+    }
+
+    /* --- Balloon Animation --- */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        /* Move balloons all the way to the top and fade them out */
+        transform: translateY(-120vh);
+        opacity: 0;
+      }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .balloon {
+      position: absolute;
+      /* CORRECTED: Start balloons from below the viewport */
+      bottom: -200px;
+      /* CHANGED: Switched to a more dynamic animation */
+      animation: float 10s infinite ease-in;
+    }
+
+    .balloon img {
+      width: 80px;
+    }
+
+    /* --- Confetti/Firecracker Background --- */
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* Positioned behind the content */
+      background: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDBoMm9sM2U2eGg3dXF6ZDU3ZGRuNmFkeTQzcXA1dzc0dWRpNnUxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tOZ42Mg6pbTUPHW/giphy.gif') repeat;
+      background-size: cover;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="confetti"></div>
+
+  <div class="container">
+    <h1>🎉 Happy Birthday Baby! 🎂</h1>
+    <p>
+      Wishing you a journey filled with success, joy, and exciting new chapters.<br />
+      May all your dreams come true, may you achieve everything you set your heart on,<br />
+      and may you marry the one you love, forever.<br /><br />
+      Cheers to your beautiful future 💖<br />
+      — With love, Aarav
+    </p>
+
+    <div class="cake-container">
+      <img src="https://media.giphy.com/media/5fHY45L9sVaj6/giphy.gif" alt="Animated birthday cake">
+    </div>
+
+    <div class="audio-control">
+      <audio controls autoplay loop>
+        <source src="https://archive.org/download/HappyBirthdayToYou-1920s/HappyBirthday-english.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="balloon" style="left: 10%; animation-duration: 12s;"><img src="https://cdn-icons-png.flaticon.com/512/3468/3468376.png" /></div>
+  <div class="balloon" style="left: 25%; animation-duration: 9s; animation-delay: 1s;"><img src="https://cdn-icons-png.flaticon.com/512/3468/3468376.png" /></div>
+  <div class="balloon" style="left: 50%; animation-duration: 10s; animation-delay: 3s;"><img src="https://cdn-icons-png.flaticon.com/512/3468/3468376.png" /></div>
+  <div class="balloon" style="left: 75%; animation-duration: 11s; animation-delay: 2s;"><img src="https://cdn-icons-png.flaticon.com/512/3468/3468376.png" /></div>
+  <div class="balloon" style="left: 90%; animation-duration: 8s; animation-delay: 4s;"><img src="https://cdn-icons-png.flaticon.com/512/3468/3468376.png" /></div>
+
+</body>
+</html>
