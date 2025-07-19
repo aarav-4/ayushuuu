@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,73 +14,50 @@
       text-align: center;
       overflow: hidden; /* Important to keep balloons from showing a scrollbar */
     }
-
     .container {
       position: relative;
       z-index: 2; /* Ensures text and cake are above the confetti */
     }
-
     h1 {
       margin-top: 40px;
       font-size: 3em;
       animation: pop 1s ease-out;
     }
-
     p {
       font-size: 1.2em;
       max-width: 600px;
       margin: 20px auto;
       line-height: 1.6;
     }
-
-    /* --- Cake Animation --- */
     .cake-container {
       margin: 30px auto;
       width: 250px;
       height: 250px;
       animation: pop 1.5s ease-out;
     }
-
     .cake-container img {
       width: 100%;
       height: 100%;
     }
-
     .audio-control {
       margin-top: 20px;
     }
-
-    /* --- Balloon Animation --- */
     @keyframes float {
-      0% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      100% {
-        /* Move balloons all the way to the top and fade them out */
-        transform: translateY(-120vh);
-        opacity: 0;
-      }
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-120vh); opacity: 0; }
     }
-
     @keyframes pop {
       0% { transform: scale(0.5); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
-
     .balloon {
       position: absolute;
-      /* CORRECTED: Start balloons from below the viewport */
       bottom: -200px;
-      /* CHANGED: Switched to a more dynamic animation */
       animation: float 10s infinite ease-in;
     }
-
     .balloon img {
       width: 80px;
     }
-
-    /* --- Confetti/Firecracker Background --- */
     .confetti {
       position: fixed;
       top: 0;
@@ -94,9 +72,7 @@
   </style>
 </head>
 <body>
-
   <div class="confetti"></div>
-
   <div class="container">
     <h1>🎉 Happy Birthday Baby! 🎂</h1>
     <p>
@@ -106,9 +82,9 @@
       Cheers to your beautiful future 💖<br />
       — With love, Aarav
     </p>
-
+    
     <div class="cake-container">
-      <img src="https://media.giphy.com/media/5fHY45L9sVaj6/giphy.gif" alt="Animated birthday cake">
+      <img src="cake.gif" alt="Animated birthday cake">
     </div>
 
     <div class="audio-control">
